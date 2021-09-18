@@ -1,0 +1,100 @@
+{%extends 'base/base.html'%}
+
+{%block title%}
+
+ORTOPEDIA BELGRANO
+
+{%endblock%}
+
+
+{% block content %}
+
+<main>
+      <div class="contenedor">
+        <img src={{ url_for ('static', filename= 'img/inicio.jpg')}} alt="Ortopedia Belgrano">
+        <div class="contenedor__texto">
+        <h3 id="direccion">BELGRANO 1701 <br>Goya,Corrientes</h3>
+        <a class="boton" href="contacto.html">Contactar</a>
+        </div> 
+      </div>
+
+       <h1> Algunos de nuestros productos </h1>
+      <section class="grid">
+      <div class="producto">
+          <a href="producto.html">
+          <img class="producto__imagen" src={{ url_for ('static', filename= 'img/C029.jpg')}} alt="chaleco-corrector-postura">
+            <div class="producto__informacion">
+              <p class="producto__codigo">C029</p>
+              <p class="producto__nombre">CHALECO CORRECTOR POSTURAL</p>
+              <p class="producto__talles">TALLES: CH | M | G </p>
+              <p class="producto__detalles"> Corrector de postura confeccionado en neopreno de 4 milímetros de espesor. <br>
+                Cierre regulable en abrojo sobre hombros.</p>
+            </div>
+          </a> 
+      </div><!--PRODUCTO--> 
+      <div class="producto">
+        <a href="producto.html">
+        <img class="producto__imagen" src={{ url_for ('static', filename= 'img/C013-01.jpg')}} alt="codera-ajuste-neoprene">
+        <div class="producto__informacion">
+          <p class="producto__codigo">C013</p>
+          <p class="producto__nombre">CODERA CON AJUSTE DE NEOPRENE</p>
+          <p class="producto__talles">TALLES: 1 | 2 | 3 | 4 </p>
+          <p class="producto__detalles"> Codera de neopreno de 4 milímetros de espesor.<br>
+            Diseño anatómico con ajuste de contención en abrojo.<br>
+            Adaptable a codo izquierdo o derecho..</p>
+        </div>
+        </a> 
+      </div><!--PRODUCTO-->
+      <div class="producto">
+        <a href="producto.html">
+        <img class="producto__imagen" src={{ url_for ('static', filename= 'img/R066.jpg')}} alt="rodillera-abierta-neoprene">
+        <div class="producto__informacion">
+          <p class="producto__codigo">R066</p>
+          <p class="producto__nombre">RODILLERA ABIERTA DE NEOPRENE</p>
+          <p class="producto__talles">TALLE: UNICO</p>
+          <p class="producto__detalles"> Confeccionada en neoprene de 4 milímetros de espesor. <br> -Cierre regulable en abrojo reforzado. <br>                
+            -Colocación práctica. <br>                  
+        </div>
+        </a> 
+      </div><!--PRODUCTO--> 
+      
+ 
+  </section>
+
+  <section class="formulario">
+    <form>
+      
+      <fieldset class="formulario__fielset">
+        <legend class="formulario__titulo">contacto</legend>
+      <div class="contenedor-campos">
+
+        <div class="campos">
+          <label>Nombre completo</label>
+          <input id="nombre" class="input" type="text" placeholder="Ingrese su nombre completo"> 
+        </div>
+        <div class="campos">
+          <label>Numero telefonico</label>
+          <input id="numeroTelefono" class="input" type="number" placeholder="Ingrese su numero telefonico">
+        </div>
+        <div class="campos">
+          <label>Correo electronico</label>
+          <input class="input" type="email" placeholder="Ingrese su correo">                
+        </div>
+        <div class="campos">
+          <label>Mensaje</label>
+          <textarea class="input" placeholder="Ingrese su mensaje"></textarea>
+        </div>
+        <Div class="campos">
+          <input id="enviar" class="boton" type="submit"></input>
+        </Div>
+      </div>
+      </fieldset>
+    </form>
+  </section>
+
+
+
+</main>
+
+
+{% endblock %}

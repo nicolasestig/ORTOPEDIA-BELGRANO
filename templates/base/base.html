@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Descripcion-->
+        <name name="Descripcion" content="Pagina web ortopedia, Goya,Corrientes"></name>
+        <title> {%block title%} {% endblock %}</title>
+        <!-- fuente-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+        <!-- prefetch-->
+        <link rel="prefetch" href="/" as="document">
+    
+        <!-- preload -->
+        <link rel="preload" href="{{ url_for ('static', filename= 'css/normalize.css')   }}" as="style">
+        <link rel="stylesheet" href="{{ url_for ('static', filename= 'css/normalize.css')   }}">
+        <link rel="preload" href="{{ url_for ('static', filename= 'css/style.css')   }}" as="style">
+        <link rel="stylesheet" href="{{ url_for ('static', filename= 'css/style.css')   }}">
+       
+    
+     </head>
+<body>
+    <header class="header">
+        <a href="/">
+            <img class="header__logo" src={{ url_for ('static', filename= 'img/logo.jpg')}} alt="Ortopedia Belgrano">
+        </a>
+    </header>
+    <nav class="navegacion">
+        <a class="navegacion__enlaces"href="/">Inicio</a>
+        <a class="navegacion__enlaces" href="/lineaortopedia">Linea ortopedia</a>
+        <a class="navegacion__enlaces" href="/plantillas">Plantillas</a>
+        <a class="navegacion__enlaces" href="/insumos">Varios</a>
+        
+        <a class="navegacion__enlaces" href="/alquileres">Alquileres</a>
+        <a class="navegacion__enlaces" href="/sobrenosotros">Sobre nosotros</a>
+        <a class="navegacion__enlaces" href="/contacto">contacto</a>
+    </nav>
+    <main>
+            {% block content %}
+            {% endblock %}
+    
+     
+    </main>
+    <footer class="footer">
+        <p class="footer__texto"> Pagina web y tienda virtual de ortopedia belgrano. Todos los derechos reservados 2022</p>
+    </footer>
+    
+    <script src="{{ url_for ('static', filename= 'js/app.js')   }}"> </script>
+ </body>
+</html>
